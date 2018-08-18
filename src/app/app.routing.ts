@@ -2,7 +2,12 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FullLayoutComponent} from './full-layout/full-layout.component';
 import {LoginComponent} from './login/login.component';
+import {ExampleModule} from "./example/example.module";
 
+
+export function loadExampleModule() {
+  return ExampleModule;
+}
 
 export const routes: Routes = [
 
@@ -16,7 +21,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'example',
-        loadChildren: './example/example.module#ExampleModule'
+        loadChildren: loadExampleModule
       }
     ]
   }
