@@ -59,6 +59,15 @@ export class FullLayoutComponent implements OnInit {
             name: 'Formulaire',
             url: '/example/formulaire'
           }]
+      },
+      {
+        name: 'Products',
+        visible: true,
+        childrens: [
+          {
+            name: 'List',
+            url: '/products'
+          }]
       }
     ];
   }

@@ -3,10 +3,14 @@ import {RouterModule, Routes} from '@angular/router';
 import {FullLayoutComponent} from './full-layout/full-layout.component';
 import {LoginComponent} from './login/login.component';
 import {ExampleModule} from "./example/example.module";
+import { ManageProductModule } from './manage-product/manage-product.module';
 
 
 export function loadExampleModule() {
   return ExampleModule;
+}
+export function loadManageProductModule() {
+  return ManageProductModule;
 }
 
 export const routes: Routes = [
@@ -22,6 +26,10 @@ export const routes: Routes = [
       {
         path: 'example',
         loadChildren: loadExampleModule
+      },
+      {
+        path: 'products',
+        loadChildren: loadManageProductModule
       }
     ]
   }

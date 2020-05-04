@@ -12,6 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from "./shared/shared.module";
 import {ExampleModule} from "./example/example.module";
 import {AdminService} from "./shared/services/admin.service";
+import { ManageProductModule } from './manage-product/manage-product.module';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {AdminService} from "./shared/services/admin.service";
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    ExampleModule
+    ExampleModule,
+    ManageProductModule
   ],
   providers: [
     {
