@@ -4,10 +4,11 @@
     <div>
       <button type="button" class="btn btn-info" [routerLink]="['/products/product-add']">ADD</button>
     </div>
-      <table class="table table-striped m-0">
+      <table class="table table-striped m-0" >
         <thead>
         <tr>
           <th>#</th>
+          <th>Photo</th>
           <th>Label</th>
           <th>Description</th>
           <th>Quantity</th>
@@ -15,27 +16,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@twitter</td>
-        </tr>
+          <tr *ngFor="let product of products">
+            <td>{{product.product_id}}</td>
+            <td>{{product.photo}}</td>
+            <td>{{product.label}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price}}</td>
+          </tr>
         </tbody>
       </table>
     </div>
