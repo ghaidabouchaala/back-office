@@ -13,6 +13,7 @@ import {SharedModule} from "./shared/shared.module";
 import {ExampleModule} from "./example/example.module";
 import {AdminService} from "./shared/services/admin.service";
 import { ManageProductModule } from './manage-product/manage-product.module';
+import {ManageUserModule} from "./manage-user/manage-user.module";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ManageProductModule } from './manage-product/manage-product.module';
     HttpClientModule,
     SharedModule,
     ExampleModule,
-    ManageProductModule
+    ManageProductModule,
+    ManageUserModule
   ],
   providers: [
     {
