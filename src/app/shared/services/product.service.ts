@@ -17,6 +17,10 @@ export class ProductService extends GenericService {
     const url = environment.baseUrl + '/products/all';
     return this.http.get<Array<Product>>(url);
   }
+  getProductById(id): Observable<Product> {
+    const url = environment.baseUrl + '/products/' + id;
+    return this.http.get<Product>(url);
+  }
   addProduct(product: Product) {
      const url = environment.baseUrl + '/products/add';
      return this.http.post(url, product);
