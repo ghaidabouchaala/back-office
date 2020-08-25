@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {ProductService} from "../../shared/services/product.service";
+import {Product} from "../../shared/models/product";
+import swal from 'sweetalert';
+
 
 @Component({
   selector: 'app-add-product',
@@ -7,20 +10,17 @@ import {NgForm} from "@angular/forms";
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
-form = {
-  label: null,
-  description: null ,
-  quantity: null,
-  price: null
-};
-  constructor() { }
+  product = new Product();
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
 
   }
   onSubmit() {
-    console.log(this.form);
+    this.productService.addProduct(this.product).subscribe(
+      data => swal("Good job!", "Product was added", "success"),
+      error => swal("Error!", "The request failed!", "error")
+  );
   }
 
 
