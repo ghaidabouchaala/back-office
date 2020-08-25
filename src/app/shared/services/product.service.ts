@@ -21,4 +21,8 @@ export class ProductService extends GenericService {
      const url = environment.baseUrl + '/products/add';
      return this.http.post(url, product);
   }
+  deleteProductById(id) {
+    const url = environment.baseUrl + '/products/delete/' + id;
+    return this.http.delete(url, id);
+  }
 }
