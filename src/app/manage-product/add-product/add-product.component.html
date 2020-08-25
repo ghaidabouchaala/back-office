@@ -24,7 +24,8 @@
         </div>
         <div >
           <button type="button" class="btn btn-info" [routerLink]="['/products']">back</button>
-          <button type="submit" class="btn btn-info" style="position: absolute;right: 25px;">Add</button>
+          <button type="submit" class="btn btn-info" style="position: absolute;right: 25px;" *ngIf="!edit">Add</button>
+          <button type="submit" class="btn btn-info" style="position: absolute;right: 25px;" *ngIf="edit">Edit</button>
         </div>
       </form>
     </div>

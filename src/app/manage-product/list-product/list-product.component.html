@@ -27,6 +27,9 @@
             <td>
               <button type="button" class="btn btn-danger" (click)="deleteProduct(product.product_id)">Delete</button>
             </td>
+            <td>
+              <button type="button" class="btn btn-success" [routerLink]="['/products/product-edit', product.product_id]" >Edit</button>
+            </td>
           </tr>
         </tbody>
       </table>

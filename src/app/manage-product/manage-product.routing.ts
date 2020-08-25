@@ -13,6 +13,10 @@ const routes: Routes = [
     component: AddProductComponent
   },
 
+  {
+    path: 'product-edit/:id',
+    component: AddProductComponent
+  },
 
 ];
 
