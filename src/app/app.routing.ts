@@ -4,6 +4,7 @@ import {FullLayoutComponent} from './full-layout/full-layout.component';
 import {LoginComponent} from './login/login.component';
 import {ExampleModule} from "./example/example.module";
 import { ManageProductModule } from './manage-product/manage-product.module';
+import {ManageUserModule} from "./manage-user/manage-user.module";
 
 
 export function loadExampleModule() {
@@ -11,6 +12,9 @@ export function loadExampleModule() {
 }
 export function loadManageProductModule() {
   return ManageProductModule;
+}
+export function loadManageUserModule() {
+  return ManageUserModule;
 }
 
 export const routes: Routes = [
@@ -30,6 +34,10 @@ export const routes: Routes = [
       {
         path: 'products',
         loadChildren: loadManageProductModule
+      },
+      {
+        path: 'users',
+        loadChildren: loadManageUserModule
       }
     ]
   }

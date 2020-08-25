@@ -48,25 +48,21 @@ export class FullLayoutComponent implements OnInit {
   initializeNavBar() {
     this.components = [
       {
-        name: 'Example',
-        visible: true,
-        childrens: [
-          {
-            name: 'List',
-            url: '/example/list'
-          },
-          {
-            name: 'Formulaire',
-            url: '/example/formulaire'
-          }]
-      },
-      {
         name: 'Products',
         visible: true,
         childrens: [
           {
             name: 'List',
             url: '/products'
+          }]
+      },
+      {
+        name: 'Users',
+        visible: true,
+        childrens: [
+          {
+            name: 'List',
+            url: '/users'
           }]
       }
     ];
